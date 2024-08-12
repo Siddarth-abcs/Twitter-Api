@@ -12,7 +12,7 @@ exports.createSubscribe = async (req, res) => {
 };
 
 exports.getSubscribe = async (req, res) => {
-  const email = req.body.email;
+  const { email } = req.query;
   try {
     const posts = await Subscribe.find({ email: email });
     res.status(200).json(posts);
