@@ -9,6 +9,6 @@ const router = express.Router();
 
 router.post("/post", createPost);
 router.get("/post", getPosts);
-router.get("/userposts", getPostsCount);
+router.get("/countpost", getPostsCount);
 
 module.exports = router;

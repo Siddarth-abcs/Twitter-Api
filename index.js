@@ -26,11 +26,11 @@ app.use(express.json());
 // Routes
 const postRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
-const subscribe = require("./routes/subscribe");
+const subscribeRoutes = require("./routes/subscribeRoutes");
 
 app.use("/", postRoutes);
 app.use("/", userRoutes);
-app.use("/", subscribe);
+app.use("/", subscribeRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
